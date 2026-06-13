@@ -1,0 +1,2 @@
+CampVibe data has been centralized in src/data/places.js, src/data/experiences.js, src/data/blogPosts.js.
+Main pages now import shared data instead of duplicating arrays.

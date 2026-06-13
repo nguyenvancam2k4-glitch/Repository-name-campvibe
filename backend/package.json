@@ -1,0 +1,37 @@
+{
+  "name": "campvibe-backend",
+  "version": "1.0.0",
+  "description": "Backend API for CampVibe glamping booking website",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "db:test": "node src/database/testConnection.js",
+    "db:test:places": "node src/database/testPlaces.js",
+    "db:test:experiences": "node src/database/testExperiences.js",
+    "db:test:blog": "node src/database/testBlogPosts.js",
+    "db:test:bookings": "node src/database/testBookings.js",
+    "db:test:admin": "node src/database/testAdminLogin.js",
+    "db:test:users": "node src/database/testUsersTable.js",
+    "db:test:customer-login": "node src/database/testCustomerLogin.js",
+    "db:test:customer-bookings": "node src/database/testCustomerBookings.js",
+    "db:test:favorites": "node src/database/testFavorites.js",
+    "db:test:contacts": "node src/database/testContactMessages.js",
+    "db:test:dashboard": "node src/database/testDashboard.js",
+    "db:update-blog": "node scripts/updateBlogContent.js",
+    "db:payment": "node scripts/addPaymentColumns.js",
+    "test:pay-booking": "node scripts/testPayBooking.js",
+    "db:init": "node scripts/initDatabase.js",
+    "db:seed": "node scripts/seedDatabase.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

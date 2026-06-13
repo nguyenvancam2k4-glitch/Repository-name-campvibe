@@ -1,0 +1,77 @@
+[
+  {
+    "path": "/",
+    "name": "Trang chủ",
+    "test": "Mở trang chủ, kiểm tra hero, search box, nút khám phá địa điểm, nút xem trải nghiệm."
+  },
+  {
+    "path": "/places",
+    "name": "Địa điểm",
+    "test": "Kiểm tra danh sách 6 địa điểm, bộ lọc, nút xem chi tiết."
+  },
+  {
+    "path": "/places/1",
+    "name": "Chi tiết địa điểm",
+    "test": "Kiểm tra trang mở từ đầu, ảnh, mô tả, tiện nghi, nút kiểm tra lịch trống."
+  },
+  {
+    "path": "/booking/1",
+    "name": "Đặt phòng",
+    "test": "Kiểm tra form đặt phòng, ngày nhận/trả, số khách, thông tin liên hệ, nút gửi yêu cầu."
+  },
+  {
+    "path": "/booking-success/1",
+    "name": "Đặt phòng thành công",
+    "test": "Kiểm tra mã đặt chỗ, trạng thái, nút xem địa điểm."
+  },
+  {
+    "path": "/experiences",
+    "name": "Trải nghiệm",
+    "test": "Kiểm tra bộ lọc trải nghiệm, card dịch vụ, nút thêm vào chuyến đi."
+  },
+  {
+    "path": "/blog",
+    "name": "Blog",
+    "test": "Kiểm tra danh sách bài viết, danh mục, nút đọc bài viết."
+  },
+  {
+    "path": "/blog/1",
+    "name": "Chi tiết blog",
+    "test": "Kiểm tra bài viết mở từ đầu, mục lục, bài viết liên quan."
+  },
+  {
+    "path": "/contact",
+    "name": "Liên hệ",
+    "test": "Kiểm tra form tư vấn, hotline, email, FAQ."
+  },
+  {
+    "path": "/account",
+    "name": "Tài khoản",
+    "test": "Kiểm tra hồ sơ khách hàng, lịch sử đặt phòng, địa điểm đã lưu."
+  },
+  {
+    "path": "/favorites",
+    "name": "Yêu thích",
+    "test": "Kiểm tra danh sách địa điểm yêu thích, nút chi tiết, nút đặt."
+  },
+  {
+    "path": "/compare",
+    "name": "So sánh",
+    "test": "Kiểm tra 3 địa điểm so sánh, bảng so sánh chi tiết, nút đặt ngay."
+  },
+  {
+    "path": "/admin-login",
+    "name": "Đăng nhập Admin",
+    "test": "Kiểm tra giao diện đăng nhập, tài khoản demo."
+  },
+  {
+    "path": "/admin",
+    "name": "Admin",
+    "test": "Kiểm tra thống kê, danh sách đơn đặt phòng, trạng thái."
+  },
+  {
+    "path": "/abc",
+    "name": "404",
+    "test": "Kiểm tra đường dẫn sai hiển thị trang 404, không về trang chủ."
+  }
+]

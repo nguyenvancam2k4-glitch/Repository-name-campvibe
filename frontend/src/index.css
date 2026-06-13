@@ -1,0 +1,670 @@
+@import "tailwindcss";
+
+
+/* CampVibe Step 54 responsive polish */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.camp-safe-wrap {
+  overflow-wrap: anywhere;
+}
+
+.camp-scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.camp-scroll-x > * {
+  min-width: 760px;
+}
+
+@media (max-width: 640px) {
+  .camp-page-title {
+    font-size: clamp(2.5rem, 14vw, 4.5rem);
+    line-height: 0.95;
+  }
+
+  .camp-mobile-card {
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+  }
+}
+
+
+/* CampVibe Step 55 final polish */
+::selection {
+  background: rgba(52, 211, 153, 0.35);
+  color: white;
+}
+
+.camp-card-hover {
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.camp-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(110, 231, 183, 0.35);
+}
+
+@media (max-width: 768px) {
+  footer {
+    text-align: left;
+  }
+}
+
+
+/* CampVibe Step 57 - Unified button system */
+:root {
+  --camp-green: #34d399;
+  --camp-green-strong: #10b981;
+  --camp-dark: #0c0a09;
+  --camp-border: rgba(255, 255, 255, 0.14);
+}
+
+.camp-btn,
+button,
+a[class*="rounded-full"],
+a[class*="rounded-2xl"],
+button[class*="rounded-full"],
+button[class*="rounded-2xl"] {
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+  transform: translateY(0) scale(1);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    opacity 180ms ease;
+  will-change: transform;
+}
+
+.camp-btn::after,
+button::after,
+a[class*="rounded-full"]::after,
+a[class*="rounded-2xl"]::after,
+button[class*="rounded-full"]::after,
+button[class*="rounded-2xl"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.22), transparent 45%, rgba(52,211,153,0.16));
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.camp-btn:hover,
+button:hover,
+a[class*="rounded-full"]:hover,
+a[class*="rounded-2xl"]:hover,
+button[class*="rounded-full"]:hover,
+button[class*="rounded-2xl"]:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+}
+
+.camp-btn:hover::after,
+button:hover::after,
+a[class*="rounded-full"]:hover::after,
+a[class*="rounded-2xl"]:hover::after,
+button[class*="rounded-full"]:hover::after,
+button[class*="rounded-2xl"]:hover::after {
+  opacity: 1;
+}
+
+.camp-btn:active,
+button:active,
+a[class*="rounded-full"]:active,
+a[class*="rounded-2xl"]:active,
+button[class*="rounded-full"]:active,
+button[class*="rounded-2xl"]:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.camp-btn:focus-visible,
+button:focus-visible,
+a[class*="rounded-full"]:focus-visible,
+a[class*="rounded-2xl"]:focus-visible,
+button[class*="rounded-full"]:focus-visible,
+button[class*="rounded-2xl"]:focus-visible {
+  outline: 3px solid rgba(52, 211, 153, 0.42);
+  outline-offset: 3px;
+}
+
+.camp-btn:disabled,
+button:disabled,
+.camp-btn[aria-disabled="true"],
+button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.camp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--camp-green), var(--camp-green-strong));
+  color: var(--camp-dark);
+  font-weight: 900;
+  box-shadow: 0 14px 34px rgba(16, 185, 129, 0.22);
+}
+
+.camp-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(110, 231, 183, 0.28);
+  background: rgba(52, 211, 153, 0.10);
+  color: #d1fae5;
+  font-weight: 900;
+}
+
+.camp-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: 9999px;
+  border: 1px solid var(--camp-border);
+  background: rgba(255, 255, 255, 0.035);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.camp-btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  background: rgba(248, 113, 113, 0.12);
+  color: #fecaca;
+  font-weight: 900;
+}
+
+.camp-btn-admin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  background: rgba(14, 165, 233, 0.10);
+  color: #bae6fd;
+  font-weight: 900;
+}
+
+header nav a,
+nav a {
+  box-shadow: none !important;
+}
+
+header nav a:hover,
+nav a:hover {
+  transform: translateY(-1px) scale(1.01);
+}
+
+input,
+select,
+textarea {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.10);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .camp-btn,
+  button,
+  a[class*="rounded-full"],
+  a[class*="rounded-2xl"],
+  button[class*="rounded-full"],
+  button[class*="rounded-2xl"] {
+    transition: none;
+    transform: none !important;
+  }
+}
+
+
+/* CampVibe Step 58 auth header */
+.camp-auth-menu {
+  animation: campMenuIn 160ms ease both;
+}
+
+@keyframes campMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* CampVibe Step 59.1 - Deep UI/copy/footer fix */
+html,
+body,
+#root {
+  min-height: 100%;
+  background: #0c0a09;
+}
+
+body {
+  background-color: #0c0a09 !important;
+}
+
+/* Form/filter controls should feel interactive like buttons */
+.camp-filter-control,
+input,
+select,
+textarea {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.camp-filter-control:hover,
+input:hover,
+select:hover,
+textarea:hover {
+  transform: translateY(-2px);
+  border-color: rgba(110, 231, 183, 0.28) !important;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.camp-filter-control:focus-within,
+input:focus,
+select:focus,
+textarea:focus {
+  transform: translateY(-2px);
+  border-color: rgba(52, 211, 153, 0.52) !important;
+  box-shadow:
+    0 0 0 4px rgba(52, 211, 153, 0.10),
+    0 18px 38px rgba(0, 0, 0, 0.24);
+}
+
+/* Prevent duplicate/legacy home footer from creating a confusing double-footer feeling */
+footer + footer {
+  display: none;
+}
+
+/* Keep footer visually attached to the page background */
+footer {
+  background-color: #0c0a09 !important;
+}
+
+
+/* CampVibe Step 60 - richer content sections */
+.camp-rich-section {
+  position: relative;
+}
+
+.camp-rich-section::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(circle at top left, rgba(52, 211, 153, 0.12), transparent 32%);
+  pointer-events: none;
+}
+
+main > section:last-child,
+main > div:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .camp-rich-section {
+    padding: 1.25rem;
+  }
+}
+
+
+/* CampVibe Step 61 - Toast, modal, loading skeleton */
+.camp-toast {
+  animation: campToastIn 220ms ease both;
+}
+
+@keyframes campToastIn {
+  from {
+    opacity: 0;
+    transform: translateX(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.camp-modal-in {
+  animation: campModalIn 180ms ease both;
+}
+
+@keyframes campModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.camp-skeleton {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.camp-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.13), transparent);
+  animation: campSkeleton 1.45s infinite;
+}
+
+@keyframes campSkeleton {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+/* CampVibe Step 61 FIX - final UI audit */
+html,
+body,
+#root {
+  min-height: 100%;
+  background: #0c0a09 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Back-to-top must stay on the bottom-right and above footer */
+.camp-back-to-top {
+  left: auto !important;
+  right: 1.5rem !important;
+  bottom: 1.5rem !important;
+  z-index: 140 !important;
+}
+
+/* Hide accidental duplicate footer if a page still renders legacy + global footer */
+footer + footer,
+footer[data-legacy-footer="true"],
+.camp-legacy-footer {
+  display: none !important;
+}
+
+/* Make filter blocks, input wrappers, selects and action-like links feel interactive */
+.camp-filter-control,
+input,
+select,
+textarea,
+label:has(input),
+label:has(select),
+div:has(> input),
+div:has(> select) {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    opacity 180ms ease;
+}
+
+.camp-filter-control:hover,
+label:has(input):hover,
+label:has(select):hover,
+div:has(> input):hover,
+div:has(> select):hover {
+  transform: translateY(-2px);
+  border-color: rgba(110, 231, 183, 0.28) !important;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.camp-filter-control:focus-within,
+label:has(input):focus-within,
+label:has(select):focus-within,
+div:has(> input):focus-within,
+div:has(> select):focus-within {
+  transform: translateY(-2px);
+  border-color: rgba(52, 211, 153, 0.52) !important;
+  box-shadow:
+    0 0 0 4px rgba(52, 211, 153, 0.10),
+    0 18px 38px rgba(0, 0, 0, 0.24);
+}
+
+/* Footer consistency */
+footer {
+  background: #0c0a09 !important;
+  margin-top: 0 !important;
+}
+
+footer a,
+footer button {
+  transition: transform 180ms ease, color 180ms ease, background-color 180ms ease;
+}
+
+footer a:hover,
+footer button:hover {
+  transform: translateY(-2px);
+}
+
+/* Toast stacking: success/error should not feel glued together */
+.camp-toast {
+  margin-bottom: 0.25rem;
+}
+
+
+/* CampVibe Step 62 FIX - Safe admin polish */
+.camp-admin-card {
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.camp-admin-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(125, 211, 252, 0.28);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+table button,
+table a,
+[role="table"] button,
+[role="table"] a {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+table button:hover,
+table a:hover,
+[role="table"] button:hover,
+[role="table"] a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+
+/* CampVibe Step 63 - Payment page */
+.camp-payment-method {
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.camp-payment-method:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CampVibe Step 64 REDO - stable payment/admin polish */
+.camp-safe-wrap {
+  overflow-wrap: anywhere;
+}
+
+.camp-payment-method {
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.camp-payment-method:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 768px) {
+  .camp-page-title {
+    letter-spacing: -0.04em;
+  }
+}
+
+
+/* CampVibe Step 65 REDO - stable invoice */
+.camp-invoice-print {
+  background: rgba(12, 10, 9, 0.65);
+}
+
+@media print {
+  header,
+  footer,
+  .camp-back-to-top {
+    display: none !important;
+  }
+
+  body,
+  #root {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+}
+
+
+/* CampVibe Step 68 - Full UI stability & premium polish */
+:root {
+  --camp-page-max-title: 4.25rem;
+  --camp-section-max-title: 3rem;
+}
+
+/* Tame oversized headings across all user/admin pages without flattening the style */
+main h1[class*="text-"] {
+  font-size: clamp(2.35rem, 4vw, var(--camp-page-max-title)) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.045em;
+}
+
+main h2[class*="text-4xl"],
+main h2[class*="text-5xl"],
+main h2[class*="md:text-5xl"] {
+  font-size: clamp(1.85rem, 2.8vw, var(--camp-section-max-title)) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.035em;
+}
+
+/* Keep admin/stat numbers impressive but not crude */
+main p[class*="text-5xl"],
+main p[class*="xl:text-5xl"] {
+  font-size: clamp(2rem, 3vw, 2.75rem) !important;
+  line-height: 1 !important;
+}
+
+/* More refined glass cards, used broadly by existing rounded panels */
+main article,
+main section > div[class*="rounded"],
+main div[class*="rounded-[2rem]"],
+main div[class*="rounded-[2.4rem]"] {
+  backdrop-filter: blur(10px);
+}
+
+/* Make dense admin areas calmer */
+main table,
+main [role="table"] {
+  font-size: 0.95rem;
+}
+
+main button,
+main a[class*="rounded"] {
+  letter-spacing: -0.01em;
+}
+
+/* Prevent comically huge icon placeholders */
+main div[class*="text-7xl"] {
+  font-size: 4rem !important;
+}
+
+/* Better page spacing on medium screens */
+@media (max-width: 1180px) {
+  main h1[class*="text-"] {
+    font-size: clamp(2.2rem, 5vw, 3.8rem) !important;
+  }
+
+  main h2[class*="text-4xl"],
+  main h2[class*="text-5xl"],
+  main h2[class*="md:text-5xl"] {
+    font-size: clamp(1.7rem, 3.6vw, 2.65rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  main h1[class*="text-"] {
+    font-size: clamp(2rem, 11vw, 3rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  main h2[class*="text-4xl"],
+  main h2[class*="text-5xl"],
+  main h2[class*="md:text-5xl"] {
+    font-size: clamp(1.55rem, 8vw, 2.2rem) !important;
+  }
+
+  .camp-btn,
+  main button,
+  main a[class*="rounded"] {
+    min-height: 2.75rem;
+  }
+}

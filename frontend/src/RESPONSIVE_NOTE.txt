@@ -1,0 +1,1 @@
+Step 27: improved responsive spacing, mobile heading sizes, CTA visibility, hero image heights, and table overflow handling.

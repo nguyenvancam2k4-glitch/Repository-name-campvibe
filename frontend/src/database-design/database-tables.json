@@ -1,0 +1,98 @@
+{
+  "users": [
+    "id",
+    "full_name",
+    "email",
+    "phone",
+    "password_hash",
+    "role",
+    "status",
+    "created_at",
+    "updated_at"
+  ],
+  "places": [
+    "id",
+    "name",
+    "location",
+    "price",
+    "rating",
+    "reviews_count",
+    "type",
+    "image_url",
+    "description",
+    "status",
+    "created_at",
+    "updated_at"
+  ],
+  "place_galleries": [
+    "id",
+    "place_id",
+    "image_url",
+    "sort_order"
+  ],
+  "amenities": [
+    "id",
+    "name"
+  ],
+  "place_amenities": [
+    "place_id",
+    "amenity_id"
+  ],
+  "experiences": [
+    "id",
+    "title",
+    "category",
+    "price",
+    "image_url",
+    "description",
+    "status"
+  ],
+  "bookings": [
+    "id",
+    "booking_code",
+    "user_id",
+    "place_id",
+    "customer_name",
+    "customer_email",
+    "customer_phone",
+    "check_in_date",
+    "check_out_date",
+    "guest_count",
+    "trip_type",
+    "note",
+    "total_amount",
+    "status",
+    "created_at",
+    "updated_at"
+  ],
+  "booking_services": [
+    "booking_id",
+    "experience_id",
+    "quantity"
+  ],
+  "blog_posts": [
+    "id",
+    "title",
+    "slug",
+    "category",
+    "excerpt",
+    "content",
+    "image_url",
+    "read_time",
+    "status",
+    "created_at"
+  ],
+  "favorites": [
+    "user_id",
+    "place_id",
+    "created_at"
+  ],
+  "reviews": [
+    "id",
+    "user_id",
+    "place_id",
+    "rating",
+    "comment",
+    "created_at"
+  ]
+}

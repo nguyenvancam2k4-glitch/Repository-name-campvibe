@@ -1,0 +1,36 @@
+{
+  "placeResponse": {
+    "id": "1",
+    "name": "Pine Forest Retreat",
+    "location": "Đà Lạt, Lâm Đồng",
+    "price": 1250000,
+    "rating": 4.9,
+    "reviewsCount": 128,
+    "type": "Rừng thông",
+    "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "description": "Khu glamping nằm giữa rừng thông yên tĩnh.",
+    "amenities": [
+      "BBQ riêng",
+      "Lửa trại",
+      "View rừng thông"
+    ],
+    "gallery": []
+  },
+  "bookingRequest": {
+    "placeId": "1",
+    "customerName": "Nguyễn Minh Anh",
+    "customerEmail": "minhanh@example.com",
+    "customerPhone": "0988 123 456",
+    "checkInDate": "2026-06-12",
+    "checkOutDate": "2026-06-13",
+    "guestCount": 2,
+    "tripType": "Đi cùng người yêu",
+    "note": "Muốn thêm BBQ và lửa trại."
+  },
+  "bookingResponse": {
+    "id": "booking-001",
+    "bookingCode": "CVB-2026-0171",
+    "status": "pending",
+    "message": "Yêu cầu đặt phòng đã được gửi thành công."
+  }
+}

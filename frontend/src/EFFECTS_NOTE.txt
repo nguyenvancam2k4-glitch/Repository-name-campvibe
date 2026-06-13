@@ -1,0 +1,1 @@
+Step 28: added global CSS effects and utility classes: camp-page, camp-card, camp-button, camp-image, camp-glow, camp-shine, camp-float.

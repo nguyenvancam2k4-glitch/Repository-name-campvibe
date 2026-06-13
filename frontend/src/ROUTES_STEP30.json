@@ -1,0 +1,77 @@
+[
+  {
+    "path": "/",
+    "page": "HomePage",
+    "purpose": "Trang chủ giới thiệu CampVibe"
+  },
+  {
+    "path": "/places",
+    "page": "PlacesPage",
+    "purpose": "Danh sách và lọc địa điểm"
+  },
+  {
+    "path": "/places/:id",
+    "page": "PlaceDetailPage",
+    "purpose": "Chi tiết từng địa điểm"
+  },
+  {
+    "path": "/booking/:id",
+    "page": "BookingPage",
+    "purpose": "Form đặt phòng mô phỏng"
+  },
+  {
+    "path": "/booking-success/:id",
+    "page": "BookingSuccessPage",
+    "purpose": "Xác nhận gửi yêu cầu đặt chỗ"
+  },
+  {
+    "path": "/experiences",
+    "page": "ExperiencesPage",
+    "purpose": "Danh sách trải nghiệm đi kèm"
+  },
+  {
+    "path": "/blog",
+    "page": "BlogPage",
+    "purpose": "Danh sách bài viết/cẩm nang"
+  },
+  {
+    "path": "/blog/:id",
+    "page": "BlogDetailPage",
+    "purpose": "Chi tiết bài viết"
+  },
+  {
+    "path": "/contact",
+    "page": "ContactPage",
+    "purpose": "Liên hệ và form tư vấn"
+  },
+  {
+    "path": "/account",
+    "page": "AccountPage",
+    "purpose": "Tài khoản khách hàng"
+  },
+  {
+    "path": "/favorites",
+    "page": "FavoritesPage",
+    "purpose": "Danh sách địa điểm yêu thích"
+  },
+  {
+    "path": "/compare",
+    "page": "ComparePage",
+    "purpose": "So sánh địa điểm"
+  },
+  {
+    "path": "/admin-login",
+    "page": "AdminLoginPage",
+    "purpose": "Đăng nhập quản trị mô phỏng"
+  },
+  {
+    "path": "/admin",
+    "page": "AdminPage",
+    "purpose": "Bảng điều khiển quản trị"
+  },
+  {
+    "path": "*",
+    "page": "NotFoundPage",
+    "purpose": "Trang lỗi 404"
+  }
+]
