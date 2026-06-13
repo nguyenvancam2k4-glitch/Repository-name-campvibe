@@ -8,26 +8,12 @@ import blogRoutes from "./routes/blogRoutes.js"
 import bookingRoutes from "./routes/bookingRoutes.js"
 import paymentRoutes from "./routes/paymentRoutes.js"
 import authRoutes from "./routes/authRoutes.js"
-import { notFoundHandler, errorHandler } from "./middleware/errorMiddleware.js"
 import favoriteRoutes from "./routes/favoriteRoutes.js"
 import contactRoutes from "./routes/contactRoutes.js"
 import dashboardRoutes from "./routes/dashboardRoutes.js"
+import { notFoundHandler, errorHandler } from "./middleware/errorMiddleware.js"
 
 const app = express()
-
-
-app.get("/", (req, res) => {
-  res.json({
-    success: true,
-    message: "CampVibe API is running",
-    health: "/api/health",
-  })
-})
-
-app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
-  credentials: true,
-}))
 
 const allowedOrigins = [
   "http://localhost:5173",
@@ -38,17 +24,37 @@ const allowedOrigins = [
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
+      if (!origin) {
         return callback(null, true)
       }
 
-      return callback(new Error("CORS policy: Origin not allowed"))
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true)
+      }
+
+      if (origin.endsWith(".vercel.app")) {
+        return callback(null, true)
+      }
+
+      return callback(new Error(`CORS blocked origin: ${origin}`))
     },
     credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 )
 
+app.options("*", cors())
+
 app.use(express.json())
+
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "CampVibe API is running",
+    health: "/api/health",
+  })
+})
 
 app.use("/api/health", healthRoutes)
 app.use("/api/places", placeRoutes)
@@ -59,7 +65,6 @@ app.use("/api/contacts", contactRoutes)
 app.use("/api/favorites", favoriteRoutes)
 app.use("/api/bookings", bookingRoutes)
 app.use("/api/auth", authRoutes)
-
 app.use("/api", paymentRoutes)
 
 app.use(notFoundHandler)
