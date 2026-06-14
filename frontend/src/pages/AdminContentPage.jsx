@@ -618,7 +618,7 @@ function AdminContentPage() {
                         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                           <div>
                             <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-300">
-                              {user.vai trò === "admin" ? "Admin" : "Khách hàng"} #{user.id}
+                              {user.role === "admin" ? "Admin" : "Khách hàng"} #{user.id}
                             </p>
                             <h3 className="mt-2 text-xl font-black">{user.fullName}</h3>
                             <p className="mt-1 text-sm text-stone-400">{user.email} • {user.phone || "Chưa có SĐT"}</p>
@@ -629,7 +629,7 @@ function AdminContentPage() {
                             </span>
                             <button
                               type="button"
-                              disabled={user.vai trò === "admin"}
+                              disabled={user.role === "admin"}
                               onClick={() => handleUserStatus(user)}
                               className="camp-btn camp-btn-secondary px-5 py-3 text-xs disabled:cursor-not-allowed disabled:opacity-40"
                             >
