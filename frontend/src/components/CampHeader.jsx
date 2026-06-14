@@ -12,6 +12,7 @@ const publicNav = [
 
 const adminNav = [
   { to: "/admin/dashboard", label: "Tổng quan" },
+  { to: "/admin/content", label: "Nội dung" },
   { to: "/admin", label: "Đơn đặt phòng" },
   { to: "/admin/contacts", label: "Liên hệ" },
   { to: "/", label: "Xem website" },

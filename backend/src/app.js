@@ -11,6 +11,7 @@ import authRoutes from "./routes/authRoutes.js"
 import favoriteRoutes from "./routes/favoriteRoutes.js"
 import contactRoutes from "./routes/contactRoutes.js"
 import dashboardRoutes from "./routes/dashboardRoutes.js"
+import adminContentRoutes from "./routes/adminContentRoutes.js"
 import { notFoundHandler, errorHandler } from "./middleware/errorMiddleware.js"
 
 const app = express()
@@ -61,6 +62,7 @@ app.use("/api/places", placeRoutes)
 app.use("/api/experiences", experienceRoutes)
 app.use("/api/blog-posts", blogRoutes)
 app.use("/api/dashboard", dashboardRoutes)
+app.use("/api/admin", adminContentRoutes)
 app.use("/api/contacts", contactRoutes)
 app.use("/api/favorites", favoriteRoutes)
 app.use("/api/bookings", bookingRoutes)

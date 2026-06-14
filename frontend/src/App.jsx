@@ -19,6 +19,7 @@ import AdminPage from "./pages/AdminPage"
 import NotFoundPage from "./pages/NotFoundPage"
 import AdminContactsPage from "./pages/AdminContactsPage"
 import AdminDashboardPage from "./pages/AdminDashboardPage"
+import AdminContentPage from "./pages/AdminContentPage"
 import SiteFooter from "./components/SiteFooter"
 import BackToTop from "./components/BackToTop"
 import { ToastProvider } from "./components/ToastProvider"
@@ -48,6 +49,7 @@ function App() {
           <Route path="/admin-login" element={<AdminLoginPage />} />
           <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
           <Route path="/admin/contacts" element={<AdminContactsPage />} />
+          <Route path="/admin/content" element={<AdminContentPage />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/payment/:bookingId" element={<PaymentPage />} />
           <Route path="/invoice/:bookingId" element={<InvoicePage />} />

@@ -60,7 +60,7 @@ export async function findPlaceById(id) {
         created_at,
         updated_at
       FROM places
-      WHERE id = $1
+      WHERE id = $1 AND status = 'active'
       LIMIT 1
     `,
     [id]

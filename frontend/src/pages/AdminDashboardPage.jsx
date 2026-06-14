@@ -117,6 +117,12 @@ function AdminDashboardPage() {
                 Làm mới số liệu
               </button>
               <Link
+                to="/admin/content"
+                className="rounded-full border border-emerald-300/30 bg-emerald-300/10 px-6 py-3 text-sm font-black text-emerald-200 transition hover:bg-emerald-300 hover:text-stone-950"
+              >
+                Quản trị nội dung
+              </Link>
+              <Link
                 to="/admin"
                 className="rounded-full border border-white/15 px-6 py-3 text-sm font-black transition hover:bg-white/10"
               >

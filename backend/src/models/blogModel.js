@@ -54,7 +54,7 @@ export async function findBlogPostById(id) {
         created_at,
         updated_at
       FROM blog_posts
-      WHERE id = $1
+      WHERE id = $1 AND status = 'published'
       LIMIT 1
     `,
     [id]
