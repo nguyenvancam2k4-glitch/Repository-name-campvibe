@@ -102,6 +102,7 @@ function AccountPage() {
               <h1 className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl">Xin chào, {user.fullName}</h1>
               <p className="mt-6 max-w-4xl text-lg leading-8 text-stone-400">Theo dõi hồ sơ cá nhân, lịch sử đặt phòng và trạng thái thanh toán trong cùng một nơi.</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link to="/account/settings" className="rounded-full border border-emerald-300/30 bg-emerald-300/10 px-7 py-4 text-center font-black text-emerald-200 hover:bg-emerald-300 hover:text-stone-950">Cài đặt tài khoản</Link>
                 <Link to="/places" className="rounded-full bg-emerald-400 px-7 py-4 text-center font-black text-stone-950">Đặt chuyến mới</Link>
                 <Link to="/favorites" className="rounded-full border border-white/15 px-7 py-4 text-center font-black hover:bg-white/10">Xem yêu thích</Link>
               </div>

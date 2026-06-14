@@ -68,7 +68,7 @@ function AdminLoginPage() {
               Đăng nhập để quản lý hệ thống CampVibe
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-400">
-              Trang đăng nhập admin hiện đã kiểm tra tài khoản thật trong CampVibe. Chỉ tài khoản có role
+              Trang đăng nhập admin hiện đã kiểm tra tài khoản thật trong CampVibe. Chỉ tài khoản có vai trò
               admin mới được vào bảng điều khiển.
             </p>
 

@@ -8,6 +8,7 @@ function ConfirmModal({
   isLoading = false,
   onConfirm,
   onCancel,
+  children,
 }) {
   if (!open) return null
 
@@ -25,6 +26,7 @@ function ConfirmModal({
 
         <h2 className="mt-6 text-3xl font-black">{title}</h2>
         <p className="mt-4 leading-8 text-stone-400">{message}</p>
+        {children}
 
         <div className="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
           <button

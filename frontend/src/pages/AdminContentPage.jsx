@@ -335,7 +335,7 @@ function AdminContentPage() {
               Admin tác động trực tiếp lên website
             </h1>
             <p className="mt-6 max-w-4xl text-lg leading-8 text-stone-400">
-              Quản lý địa điểm, trải nghiệm, bài viết và tài khoản khách hàng. Khi admin ẩn/hiện hoặc chỉnh sửa nội dung, dữ liệu sẽ được cập nhật trong PostgreSQL và phản ánh trên trang người dùng.
+              Quản lý địa điểm, trải nghiệm, bài viết và tài khoản khách hàng. Khi admin ẩn/hiện hoặc chỉnh sửa nội dung, nội dung sẽ được cập nhật và phản ánh trên trang người dùng.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -618,7 +618,7 @@ function AdminContentPage() {
                         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                           <div>
                             <p className="text-xs font-black uppercase tracking-[0.25em] text-emerald-300">
-                              {user.role === "admin" ? "Admin" : "Khách hàng"} #{user.id}
+                              {user.vai trò === "admin" ? "Admin" : "Khách hàng"} #{user.id}
                             </p>
                             <h3 className="mt-2 text-xl font-black">{user.fullName}</h3>
                             <p className="mt-1 text-sm text-stone-400">{user.email} • {user.phone || "Chưa có SĐT"}</p>
@@ -629,7 +629,7 @@ function AdminContentPage() {
                             </span>
                             <button
                               type="button"
-                              disabled={user.role === "admin"}
+                              disabled={user.vai trò === "admin"}
                               onClick={() => handleUserStatus(user)}
                               className="camp-btn camp-btn-secondary px-5 py-3 text-xs disabled:cursor-not-allowed disabled:opacity-40"
                             >

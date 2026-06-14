@@ -10,6 +10,7 @@ import BlogPage from "./pages/BlogPage"
 import BlogDetailPage from "./pages/BlogDetailPage"
 import ContactPage from "./pages/ContactPage"
 import AccountPage from "./pages/AccountPage"
+import AccountSettingsPage from "./pages/AccountSettingsPage"
 import FavoritesPage from "./pages/FavoritesPage"
 import ComparePage from "./pages/ComparePage"
 import LoginPage from "./pages/LoginPage"
@@ -42,6 +43,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/account" element={<AccountPage />} />
+          <Route path="/account/settings" element={<AccountSettingsPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/compare" element={<ComparePage />} />
           <Route path="/login" element={<LoginPage />} />
